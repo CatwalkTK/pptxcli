@@ -1,0 +1,2 @@
+[console_scripts]
+pptxv = cli.__main__:main

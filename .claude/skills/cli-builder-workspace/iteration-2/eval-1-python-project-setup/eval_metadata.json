@@ -1,0 +1,16 @@
+{
+  "eval_id": 1,
+  "eval_name": "python-project-setup",
+  "prompt": "Pythonでプロジェクトセットアップ用のCLIツール「projinit」を作って。対話的にテンプレート選択（minimal, standard, full）ができて、プロジェクト名の入力、依存パッケージのインストールでプログレスバーが表示される。起動時にかっこいいバナーを出して。",
+  "assertions": [
+    {"name": "uses-typer", "description": "typer（推奨）でコマンド定義している", "type": "content_contains", "pattern": "import typer|from typer"},
+    {"name": "uses-pyfiglet", "description": "pyfigletでASCIIバナー生成している", "type": "content_contains", "pattern": "import pyfiglet|from pyfiglet|figlet_format"},
+    {"name": "uses-rich", "description": "richライブラリでスタイル付き出力", "type": "content_contains", "pattern": "from rich|import rich"},
+    {"name": "uses-questionary", "description": "questionaryで対話プロンプト", "type": "content_contains", "pattern": "import questionary|from questionary"},
+    {"name": "has-progress-bar", "description": "プログレスバー/スピナー表示", "type": "content_contains", "pattern": "rich\\.progress|track\\(|Status\\(|Progress\\("},
+    {"name": "has-template-choices", "description": "minimal/standard/full テンプレート選択", "type": "content_contains", "pattern": "minimal|standard|full"},
+    {"name": "has-4-layer-architecture", "description": "ui/ + commands/ + lib/ ディレクトリ分離", "type": "structural"},
+    {"name": "has-pyproject-toml", "description": "pyproject.tomlでプロジェクト設定", "type": "file_exists", "pattern": "**/pyproject.toml"},
+    {"name": "has-theme-file", "description": "theme.py カラーテーマファイルが存在", "type": "file_exists", "pattern": "**/theme.*"}
+  ]
+}

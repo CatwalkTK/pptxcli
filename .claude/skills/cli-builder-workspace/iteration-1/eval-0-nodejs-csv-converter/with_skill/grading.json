@@ -1,0 +1,38 @@
+{
+  "variant": "with_skill",
+  "expectations": [
+    {
+      "text": "figletでバナー表示がある",
+      "passed": true,
+      "evidence": "Found 15 matches"
+    },
+    {
+      "text": "カラーテーマが定義されている",
+      "passed": true,
+      "evidence": "Found 84 matches"
+    },
+    {
+      "text": "commanderでコマンドルーティング",
+      "passed": true,
+      "evidence": "Found 4 matches"
+    },
+    {
+      "text": "プログレス表示がある",
+      "passed": true,
+      "evidence": "Found 29 matches"
+    },
+    {
+      "text": "--outputオプション定義",
+      "passed": true,
+      "evidence": "Found 6 matches"
+    },
+    {
+      "text": "UI/ビジネスロジック分離（ディレクトリ構造）",
+      "passed": true,
+      "evidence": "Found ui/ + lib/commands/ directories"
+    }
+  ],
+  "pass_rate": 1.0,
+  "pass_count": 6,
+  "total": 6
+}

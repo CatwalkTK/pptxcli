@@ -1,0 +1,320 @@
+{
+  "eval-0-nodejs-csv-converter/with_skill": {
+    "variant": "with_skill",
+    "expectations": [
+      {
+        "text": "TypeScript (.ts) ファイルで実装",
+        "passed": true,
+        "evidence": "Found 12 \\.ts$ files"
+      },
+      {
+        "text": "figletライブラリ使用",
+        "passed": true,
+        "evidence": "Found 1 matches"
+      },
+      {
+        "text": "chalkライブラリ使用",
+        "passed": true,
+        "evidence": "Found 2 matches"
+      },
+      {
+        "text": "commanderルーティング",
+        "passed": true,
+        "evidence": "Found 3 matches"
+      },
+      {
+        "text": "プログレス表示",
+        "passed": true,
+        "evidence": "Found 4 matches"
+      },
+      {
+        "text": "--outputオプション",
+        "passed": true,
+        "evidence": "Found 6 matches"
+      },
+      {
+        "text": "ui/ + commands/ + lib/ ディレクトリ分離",
+        "passed": true,
+        "evidence": "Found: ui/, commands/, lib/"
+      },
+      {
+        "text": "theme.ts テーマファイル",
+        "passed": true,
+        "evidence": "Found: src/ui/theme.ts"
+      },
+      {
+        "text": "banner.ts バナーモジュール",
+        "passed": true,
+        "evidence": "Found: src/ui/banner.ts"
+      }
+    ],
+    "pass_rate": 1.0,
+    "pass_count": 9,
+    "total": 9
+  },
+  "eval-0-nodejs-csv-converter/without_skill": {
+    "variant": "without_skill",
+    "expectations": [
+      {
+        "text": "TypeScript (.ts) ファイルで実装",
+        "passed": true,
+        "evidence": "Found 3 \\.ts$ files"
+      },
+      {
+        "text": "figletライブラリ使用",
+        "passed": false,
+        "evidence": "No matches in source code"
+      },
+      {
+        "text": "chalkライブラリ使用",
+        "passed": true,
+        "evidence": "Found 3 matches"
+      },
+      {
+        "text": "commanderルーティング",
+        "passed": true,
+        "evidence": "Found 3 matches"
+      },
+      {
+        "text": "プログレス表示",
+        "passed": true,
+        "evidence": "Found 1 matches"
+      },
+      {
+        "text": "--outputオプション",
+        "passed": true,
+        "evidence": "Found 7 matches"
+      },
+      {
+        "text": "ui/ + commands/ + lib/ ディレクトリ分離",
+        "passed": false,
+        "evidence": "No layer directories found"
+      },
+      {
+        "text": "theme.ts テーマファイル",
+        "passed": false,
+        "evidence": "No matching files"
+      },
+      {
+        "text": "banner.ts バナーモジュール",
+        "passed": true,
+        "evidence": "Found: src/banner.ts"
+      }
+    ],
+    "pass_rate": 0.667,
+    "pass_count": 6,
+    "total": 9
+  },
+  "eval-1-python-project-setup/with_skill": {
+    "variant": "with_skill",
+    "expectations": [
+      {
+        "text": "typer（推奨）使用",
+        "passed": true,
+        "evidence": "Found 3 matches"
+      },
+      {
+        "text": "pyfigletバナー生成",
+        "passed": true,
+        "evidence": "Found 3 matches"
+      },
+      {
+        "text": "richライブラリ使用",
+        "passed": true,
+        "evidence": "Found 10 matches"
+      },
+      {
+        "text": "questionary対話プロンプト",
+        "passed": true,
+        "evidence": "Found 2 matches"
+      },
+      {
+        "text": "プログレスバー/スピナー",
+        "passed": true,
+        "evidence": "Found 22 matches"
+      },
+      {
+        "text": "テンプレート選択肢",
+        "passed": true,
+        "evidence": "Found 9 matches"
+      },
+      {
+        "text": "ui/ + commands/ + lib/ 分離",
+        "passed": true,
+        "evidence": "Found: ui/, commands/, lib/"
+      },
+      {
+        "text": "pyproject.toml設定",
+        "passed": true,
+        "evidence": "Found: pyproject.toml"
+      },
+      {
+        "text": "theme.py テーマファイル",
+        "passed": true,
+        "evidence": "Found: src/projinit/ui/theme.py"
+      }
+    ],
+    "pass_rate": 1.0,
+    "pass_count": 9,
+    "total": 9
+  },
+  "eval-1-python-project-setup/without_skill": {
+    "variant": "without_skill",
+    "expectations": [
+      {
+        "text": "typer（推奨）使用",
+        "passed": false,
+        "evidence": "No matches in source code"
+      },
+      {
+        "text": "pyfigletバナー生成",
+        "passed": false,
+        "evidence": "No matches in source code"
+      },
+      {
+        "text": "richライブラリ使用",
+        "passed": true,
+        "evidence": "Found 9 matches"
+      },
+      {
+        "text": "questionary対話プロンプト",
+        "passed": true,
+        "evidence": "Found 2 matches"
+      },
+      {
+        "text": "プログレスバー/スピナー",
+        "passed": true,
+        "evidence": "Found 11 matches"
+      },
+      {
+        "text": "テンプレート選択肢",
+        "passed": true,
+        "evidence": "Found 19 matches"
+      },
+      {
+        "text": "ui/ + commands/ + lib/ 分離",
+        "passed": false,
+        "evidence": "No layer directories found"
+      },
+      {
+        "text": "pyproject.toml設定",
+        "passed": true,
+        "evidence": "Found: pyproject.toml"
+      },
+      {
+        "text": "theme.py テーマファイル",
+        "passed": false,
+        "evidence": "No matching files"
+      }
+    ],
+    "pass_rate": 0.556,
+    "pass_count": 5,
+    "total": 9
+  },
+  "eval-2-task-manager/with_skill": {
+    "variant": "with_skill",
+    "expectations": [
+      {
+        "text": "figlet/pyfigletバナー",
+        "passed": true,
+        "evidence": "Found 1 matches"
+      },
+      {
+        "text": "chalk/rich使用",
+        "passed": true,
+        "evidence": "Found 1 matches"
+      },
+      {
+        "text": "addコマンド",
+        "passed": true,
+        "evidence": "Found 4 matches"
+      },
+      {
+        "text": "listコマンド",
+        "passed": true,
+        "evidence": "Found 4 matches"
+      },
+      {
+        "text": "doneコマンド",
+        "passed": true,
+        "evidence": "Found 56 matches"
+      },
+      {
+        "text": "JSONストレージ",
+        "passed": true,
+        "evidence": "Found 7 matches"
+      },
+      {
+        "text": "ui/ + commands/ + lib/ 分離",
+        "passed": true,
+        "evidence": "Found: ui/, commands/, lib/"
+      },
+      {
+        "text": "theme.ts/theme.py テーマ",
+        "passed": true,
+        "evidence": "Found: src/ui/theme.ts"
+      },
+      {
+        "text": "TypeScript or typer使用",
+        "passed": true,
+        "evidence": "Found: 14 .ts files"
+      }
+    ],
+    "pass_rate": 1.0,
+    "pass_count": 9,
+    "total": 9
+  },
+  "eval-2-task-manager/without_skill": {
+    "variant": "without_skill",
+    "expectations": [
+      {
+        "text": "figlet/pyfigletバナー",
+        "passed": false,
+        "evidence": "No matches in source code"
+      },
+      {
+        "text": "chalk/rich使用",
+        "passed": false,
+        "evidence": "No matches in source code"
+      },
+      {
+        "text": "addコマンド",
+        "passed": true,
+        "evidence": "Found 3 matches"
+      },
+      {
+        "text": "listコマンド",
+        "passed": true,
+        "evidence": "Found 3 matches"
+      },
+      {
+        "text": "doneコマンド",
+        "passed": true,
+        "evidence": "Found 42 matches"
+      },
+      {
+        "text": "JSONストレージ",
+        "passed": true,
+        "evidence": "Found 5 matches"
+      },
+      {
+        "text": "ui/ + commands/ + lib/ 分離",
+        "passed": false,
+        "evidence": "No layer directories found"
+      },
+      {
+        "text": "theme.ts/theme.py テーマ",
+        "passed": false,
+        "evidence": "No matching files"
+      },
+      {
+        "text": "TypeScript or typer使用",
+        "passed": false,
+        "evidence": "No TypeScript files or typer imports"
+      }
+    ],
+    "pass_rate": 0.444,
+    "pass_count": 4,
+    "total": 9
+  }
+}

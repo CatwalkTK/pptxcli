@@ -1,0 +1,77 @@
+{
+  "skill_name": "cli-builder",
+  "iteration": 2,
+  "configurations": [
+    {
+      "name": "with_skill",
+      "evals": [
+        {
+          "eval_name": "nodejs-csv-converter",
+          "pass_rate": 1.0,
+          "tokens": 77231,
+          "duration_seconds": 160.0
+        },
+        {
+          "eval_name": "python-project-setup",
+          "pass_rate": 1.0,
+          "tokens": 88328,
+          "duration_seconds": 203.1
+        },
+        {
+          "eval_name": "task-manager",
+          "pass_rate": 1.0,
+          "tokens": 77614,
+          "duration_seconds": 150.1
+        }
+      ],
+      "aggregate": {
+        "mean_pass_rate": 1.0,
+        "mean_tokens": 81058,
+        "mean_duration_seconds": 171.1
+      }
+    },
+    {
+      "name": "without_skill",
+      "evals": [
+        {
+          "eval_name": "nodejs-csv-converter",
+          "pass_rate": 0.667,
+          "tokens": 60695,
+          "duration_seconds": 84.1
+        },
+        {
+          "eval_name": "python-project-setup",
+          "pass_rate": 0.556,
+          "tokens": 75260,
+          "duration_seconds": 257.7
+        },
+        {
+          "eval_name": "task-manager",
+          "pass_rate": 0.444,
+          "tokens": 68771,
+          "duration_seconds": 182.1
+        }
+      ],
+      "aggregate": {
+        "mean_pass_rate": 0.556,
+        "mean_tokens": 68242,
+        "mean_duration_seconds": 174.6
+      }
+    }
+  ],
+  "delta": {
+    "pass_rate": "+44.4%",
+    "tokens": "+19%",
+    "duration": "-2%"
+  },
+  "analyst_notes": [
+    "with_skill achieves 100% pass rate across all 9 assertions per eval; without_skill averages 55.6%",
+    "Key discriminating assertions: 4-layer architecture (ui/commands/lib), figlet/pyfiglet usage, theme file existence, TypeScript/typer usage",
+    "without_skill consistently fails: no dedicated theme file, no layered directory structure, no figlet library usage",
+    "Eval 2 (task-manager) shows maximum gap: with_skill 100% vs without_skill 44% — vanilla JS with zero dependencies vs TypeScript with established libraries",
+    "Eval 1 (python-project-setup) confirms typer vs click divergence: with_skill always selects typer (as recommended), without_skill defaults to click",
+    "Token usage +19% for with_skill (81K vs 68K) — slightly improved from iteration 1's +24%, likely due to trimmed skill content",
+    "Duration is now comparable (-2%) — with_skill is actually slightly faster on average",
+    "Compared to iteration 1: assertions are now discriminating (was 0% delta, now +44.4%), confirming skill value is real but was previously unmeasured"
+  ]
+}

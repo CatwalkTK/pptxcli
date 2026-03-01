@@ -1,0 +1,38 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Design landing page",
+      "priority": "high",
+      "done": true,
+      "createdAt": "2026-02-27T05:01:40.564Z",
+      "completedAt": "2026-02-27T05:01:53.289Z"
+    },
+    {
+      "id": 2,
+      "title": "Write unit tests",
+      "priority": "normal",
+      "done": false,
+      "createdAt": "2026-02-27T05:01:44.696Z",
+      "completedAt": null
+    },
+    {
+      "id": 3,
+      "title": "Fix login bug",
+      "priority": "high",
+      "done": false,
+      "createdAt": "2026-02-27T05:01:44.826Z",
+      "completedAt": null
+    },
+    {
+      "id": 4,
+      "title": "Update README",
+      "priority": "low",
+      "done": false,
+      "createdAt": "2026-02-27T05:01:44.956Z",
+      "completedAt": null
+    }
+  ],
+  "nextId": 5,
+  "createdAt": "2026-02-27T05:01:40.560Z"
+}

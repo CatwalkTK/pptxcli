@@ -1,0 +1,37 @@
+{
+  "eval_id": 2,
+  "eval_name": "task-manager",
+  "prompt": "ターミナルで動くかっこいいタスク管理ツールを作りたい。add, list, done コマンドでタスクを管理できるようにして。起動時のバナーとステータス表示もほしい。JSONファイルでタスクを保存して。",
+  "assertions": [
+    {
+      "name": "has-banner",
+      "description": "ASCII artバナーが表示される（figlet系ライブラリ使用）",
+      "check": "content_contains_figlet"
+    },
+    {
+      "name": "has-add-command",
+      "description": "addコマンドが実装されている",
+      "check": "content_contains_add_command"
+    },
+    {
+      "name": "has-list-command",
+      "description": "listコマンドが実装されている",
+      "check": "content_contains_list_command"
+    },
+    {
+      "name": "has-done-command",
+      "description": "doneコマンドが実装されている",
+      "check": "content_contains_done_command"
+    },
+    {
+      "name": "has-json-storage",
+      "description": "JSONファイルでタスクを永続化する",
+      "check": "content_contains_json_storage"
+    },
+    {
+      "name": "has-styled-output",
+      "description": "色付きまたはスタイル付き出力がある",
+      "check": "content_contains_styled_output"
+    }
+  ]
+}

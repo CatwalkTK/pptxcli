@@ -1,0 +1,23 @@
+[
+  {"query": "Build me a CLI tool in Node.js that takes a CSV file path as input, lets the user pick which columns to keep via an interactive checkbox prompt, and outputs the filtered CSV. Should have a nice ASCII banner at startup.", "should_trigger": true},
+  {"query": "CLIアプリを作りたい。Pythonで、対話的にユーザーにDB接続情報（ホスト、ポート、ユーザー名、パスワード）を入力させて、マイグレーションを実行するツール。プログレスバーも欲しい。", "should_trigger": true},
+  {"query": "I want to create a command-line interface for our internal deployment system at Acme Corp. It needs subcommands like `deploy`, `rollback`, `status`, and `logs`. Each subcommand should have its own flags. TypeScript preferred.", "should_trigger": true},
+  {"query": "ターミナルで動くタスク管理ツールを作って。add, list, done, deleteのコマンドがあって、リスト表示時は色付きでステータスが分かるようにしたい。Node.jsで。", "should_trigger": true},
+  {"query": "need a quick interactive terminal app - user selects from a list of AWS regions, then picks an EC2 instance type, and it generates a terraform snippet. color output would be nice", "should_trigger": true},
+  {"query": "Make a Node.js script that runs in the terminal with a cool banner, accepts commands like `scan`, `report`, and `fix`, shows a spinner while scanning files for TODO comments, and prints results in a table format with colors.", "should_trigger": true},
+  {"query": "Pythonでコマンドラインツール作成を手伝ってほしい。引数でサブコマンドを切り替えて、`init`でプロジェクト雛形を生成、`serve`でローカルサーバー起動、`build`で成果物をビルドする感じ。ヘルプメッセージもきちんと出したい。", "should_trigger": true},
+  {"query": "I'm building a developer tool that lives in the terminal. It should greet the user with an ASCII art logo, show a status line with the current project info, and provide an interactive menu to run linting, testing, or formatting. Think of it like a mini dashboard for the console.", "should_trigger": true},
+  {"query": "create a terminal-based file organizer - walks through ~/Downloads, asks the user interactively how to categorize each file type, moves them into folders, and shows progress with a bar. typescript please", "should_trigger": true},
+  {"query": "社内用のCLIを作りたいんだけど、`myctl config set`とか`myctl config get`みたいにサブコマンドをネストさせたい。あとバージョン表示とかヘルプも自動生成してほしい。Python or Node.jsどっちでもOK。", "should_trigger": true},
+
+  {"query": "Build a REST API in Node.js with Express that has endpoints for user CRUD operations. Should connect to PostgreSQL and include JWT authentication.", "should_trigger": false},
+  {"query": "Reactでダッシュボード画面を作りたい。グラフとテーブルがあって、フィルター機能もつけたい。Material UIを使って。", "should_trigger": false},
+  {"query": "Write a bash script that backs up /var/log to S3 every night at 2am. Include log rotation and email notification on failure.", "should_trigger": false},
+  {"query": "I need a Python script to parse a CSV file at C:\\data\\sales_2025.csv, calculate the sum of the 'revenue' column grouped by 'region', and save the result to output.csv. No user interaction needed, just a one-shot script.", "should_trigger": false},
+  {"query": "Node.jsでWebSocketサーバーを立てて、リアルタイムチャットアプリのバックエンドを作って。フロントはNext.jsで。", "should_trigger": false},
+  {"query": "Help me debug this TypeScript error: 'Type string is not assignable to type number' on line 42 of src/services/UserService.ts. Here's the code...", "should_trigger": false},
+  {"query": "Create a GitHub Actions workflow that runs ESLint, Prettier, and Jest on every PR. Should also check code coverage and post results as a comment.", "should_trigger": false},
+  {"query": "PythonでSeleniumを使ってブラウザ自動操作するスクリプトを書いて。ログインして、特定のページからデータをスクレイピングしてJSONに保存したい。", "should_trigger": false},
+  {"query": "I need to write a shell one-liner that finds all .log files older than 30 days in /var/log and deletes them. Not a full tool, just the command.", "should_trigger": false},
+  {"query": "Dockerfileを書いて。Node.js 20のalpineベースで、pnpm使って依存インストールして、Next.jsアプリをビルド・起動する。マルチステージビルドで。", "should_trigger": false}
+]

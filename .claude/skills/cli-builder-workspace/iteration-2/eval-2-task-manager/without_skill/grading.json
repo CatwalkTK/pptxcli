@@ -1,0 +1,53 @@
+{
+  "variant": "without_skill",
+  "expectations": [
+    {
+      "text": "figlet/pyfigletバナー",
+      "passed": false,
+      "evidence": "No matches in source code"
+    },
+    {
+      "text": "chalk/rich使用",
+      "passed": false,
+      "evidence": "No matches in source code"
+    },
+    {
+      "text": "addコマンド",
+      "passed": true,
+      "evidence": "Found 3 matches"
+    },
+    {
+      "text": "listコマンド",
+      "passed": true,
+      "evidence": "Found 3 matches"
+    },
+    {
+      "text": "doneコマンド",
+      "passed": true,
+      "evidence": "Found 42 matches"
+    },
+    {
+      "text": "JSONストレージ",
+      "passed": true,
+      "evidence": "Found 5 matches"
+    },
+    {
+      "text": "ui/ + commands/ + lib/ 分離",
+      "passed": false,
+      "evidence": "No layer directories found"
+    },
+    {
+      "text": "theme.ts/theme.py テーマ",
+      "passed": false,
+      "evidence": "No matching files"
+    },
+    {
+      "text": "TypeScript or typer使用",
+      "passed": false,
+      "evidence": "No TypeScript files or typer imports"
+    }
+  ],
+  "pass_rate": 0.444,
+  "pass_count": 4,
+  "total": 9
+}

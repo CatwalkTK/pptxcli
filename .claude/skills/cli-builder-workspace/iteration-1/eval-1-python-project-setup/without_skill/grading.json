@@ -1,0 +1,38 @@
+{
+  "variant": "without_skill",
+  "expectations": [
+    {
+      "text": "pyfigletバナー表示",
+      "passed": true,
+      "evidence": "Found 39 matches"
+    },
+    {
+      "text": "richライブラリ使用",
+      "passed": true,
+      "evidence": "Found 110 matches"
+    },
+    {
+      "text": "typerまたはclick使用",
+      "passed": true,
+      "evidence": "Found 7 matches"
+    },
+    {
+      "text": "対話プロンプト",
+      "passed": true,
+      "evidence": "Found 41 matches"
+    },
+    {
+      "text": "プログレスバー/スピナー",
+      "passed": true,
+      "evidence": "Found 35 matches"
+    },
+    {
+      "text": "テンプレート選択肢",
+      "passed": true,
+      "evidence": "Found 84 matches"
+    }
+  ],
+  "pass_rate": 1.0,
+  "pass_count": 6,
+  "total": 6
+}

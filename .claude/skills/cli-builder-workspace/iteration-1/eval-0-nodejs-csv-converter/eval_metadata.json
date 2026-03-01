@@ -1,0 +1,37 @@
+{
+  "eval_id": 0,
+  "eval_name": "nodejs-csv-converter",
+  "prompt": "TypeScriptでファイル変換CLIツール「csv2json」を作って。convertコマンドでCSVファイルをJSONに変換できるようにしたい。ASCIIバナー付きで、変換中のプログレス表示もほしい。--output オプションで出力先を指定できるように。",
+  "assertions": [
+    {
+      "name": "has-banner-module",
+      "description": "バナー表示用のモジュールが存在する（figlet使用）",
+      "check": "file_or_content_contains_figlet"
+    },
+    {
+      "name": "has-color-theme",
+      "description": "カラーテーマが定義されている（chalk等）",
+      "check": "content_contains_chalk_or_theme"
+    },
+    {
+      "name": "has-commander-setup",
+      "description": "commanderまたはyargsでコマンドルーティングが設定されている",
+      "check": "content_contains_commander_or_yargs"
+    },
+    {
+      "name": "has-progress-indicator",
+      "description": "プログレス表示(spinnerまたはprogress bar)がある",
+      "check": "content_contains_ora_or_progress"
+    },
+    {
+      "name": "has-output-option",
+      "description": "--output オプションが定義されている",
+      "check": "content_contains_output_option"
+    },
+    {
+      "name": "separation-of-concerns",
+      "description": "UIとビジネスロジックが分離されている（別ディレクトリ）",
+      "check": "directory_structure_has_separation"
+    }
+  ]
+}

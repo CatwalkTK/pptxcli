@@ -1,0 +1,37 @@
+{
+  "name": "csv2json",
+  "version": "1.0.0",
+  "description": "A professional CLI tool to convert CSV files to JSON format",
+  "type": "module",
+  "bin": {
+    "csv2json": "./bin/cli.js"
+  },
+  "files": [
+    "bin/",
+    "dist/"
+  ],
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "vitest"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "cli-progress": "^3.12.0",
+    "cli-table3": "^0.6.5",
+    "commander": "^12.1.0",
+    "figlet": "^1.8.0"
+  },
+  "devDependencies": {
+    "@types/cli-progress": "^3.11.6",
+    "@types/figlet": "^1.7.0",
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "taskr",
+  "version": "1.0.0",
+  "description": "A stylish terminal task manager with add, list, and done commands",
+  "type": "module",
+  "main": "src/index.ts",
+  "bin": {
+    "taskr": "./bin/cli.js"
+  },
+  "scripts": {
+    "start": "npx tsx src/index.ts",
+    "dev": "npx tsx watch src/index.ts",
+    "build": "tsc",
+    "taskr": "npx tsx src/index.ts"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "cli-table3": "^0.6.5",
+    "commander": "^12.1.0",
+    "figlet": "^1.8.0",
+    "ora": "^8.1.1"
+  },
+  "devDependencies": {
+    "@types/figlet": "^1.7.0",
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

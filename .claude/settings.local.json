@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import anthropic; import rich; import prompt_toolkit; import dotenv; import pptx; print\\(''anthropic:'', anthropic.__version__\\); print\\(''rich:'', rich.__version__\\); print\\(''prompt_toolkit:'', prompt_toolkit.__version__\\); print\\(''pptx:'', pptx.__version__\\)\")",
+      "Bash(cd:*)",
+      "Bash(python -c \"from cli.tools import get_anthropic_tools, TOOL_MAP; print\\(''Tools:'', list\\(TOOL_MAP.keys\\(\\)\\)\\); tools = get_anthropic_tools\\(\\); print\\(f''{len\\(tools\\)} tools registered''\\)\")",
+      "Bash(python -c \"from cli.agent import Agent; from cli.ui.console import print_welcome; from cli.ui.input import create_prompt_session; print\\(''All modules import OK''\\)\")",
+      "Bash(python -c \":*)",
+      "Bash(test -f /c/ai/pptx/.env)",
+      "Bash(echo $ANTHROPIC_API_KEY)",
+      "Bash(python:*)",
+      "Bash(xargs grep:*)",
+      "Bash(node:*)",
+      "Bash(pip install:*)",
+      "Bash(choco:*)",
+      "Bash(npm root:*)",
+      "Bash(echo:*)",
+      "Bash(scoop bucket:*)",
+      "Bash(scoop install:*)",
+      "Bash(pdftoppm:*)",
+      "Bash(source:*)",
+      "Bash(printf:*)",
+      "Bash(ls:*)",
+      "Bash(where pptxv:*)",
+      "Bash(echo $PATH:*)",
+      "Bash(printenv PATH:*)",
+      "Bash(\"C:/Users/tsuda/AppData/Roaming/Python/Python312/Scripts/pptxv.exe\":*)",
+      "Bash(powershell:*)",
+      "Bash(export:*)",
+      "WebSearch",
+      "Bash(soffice:*)",
+      "Bash(PYTHONUTF8=1 python:*)",
+      "Bash(start:*)",
+      "Bash(npx playwright:*)",
+      "Bash(where claude:*)"
+    ]
+  }
+}

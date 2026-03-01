@@ -1,0 +1,30 @@
+[project]
+name = "projinit"
+version = "1.0.0"
+description = "Interactive project scaffolding CLI with template selection, dependency installation, and polished terminal UX"
+requires-python = ">=3.10"
+dependencies = [
+    "typer>=0.9",
+    "rich>=13",
+    "pyfiglet>=1.0",
+    "questionary>=2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7",
+    "pytest-cov",
+]
+
+[project.scripts]
+projinit = "projinit.cli:app"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

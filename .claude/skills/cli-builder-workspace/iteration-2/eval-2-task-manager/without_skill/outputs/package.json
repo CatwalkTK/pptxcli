@@ -1,0 +1,23 @@
+{
+  "name": "taskr",
+  "version": "1.0.0",
+  "description": "A stylish terminal task manager with add, list, and done commands",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "taskr": "./src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "add": "node src/index.js add",
+    "list": "node src/index.js list",
+    "done": "node src/index.js done"
+  },
+  "keywords": [
+    "cli",
+    "task-manager",
+    "terminal",
+    "todo"
+  ],
+  "license": "MIT"
+}

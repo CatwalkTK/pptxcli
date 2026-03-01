@@ -1,0 +1,38 @@
+{
+  "variant": "without_skill",
+  "expectations": [
+    {
+      "text": "ASCIIバナー表示",
+      "passed": true,
+      "evidence": "Found 13 matches"
+    },
+    {
+      "text": "addコマンド実装",
+      "passed": true,
+      "evidence": "Found 2 matches"
+    },
+    {
+      "text": "listコマンド実装",
+      "passed": true,
+      "evidence": "Found 3 matches"
+    },
+    {
+      "text": "doneコマンド実装",
+      "passed": true,
+      "evidence": "Found 25 matches"
+    },
+    {
+      "text": "JSONストレージ",
+      "passed": true,
+      "evidence": "Found 7 matches"
+    },
+    {
+      "text": "スタイル付き出力",
+      "passed": true,
+      "evidence": "Found 28 matches"
+    }
+  ],
+  "pass_rate": 1.0,
+  "pass_count": 6,
+  "total": 6
+}

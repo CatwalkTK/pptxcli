@@ -1,0 +1,230 @@
+{
+  "eval-0-nodejs-csv-converter/with_skill": {
+    "variant": "with_skill",
+    "expectations": [
+      {
+        "text": "figletでバナー表示がある",
+        "passed": true,
+        "evidence": "Found 15 matches"
+      },
+      {
+        "text": "カラーテーマが定義されている",
+        "passed": true,
+        "evidence": "Found 84 matches"
+      },
+      {
+        "text": "commanderでコマンドルーティング",
+        "passed": true,
+        "evidence": "Found 4 matches"
+      },
+      {
+        "text": "プログレス表示がある",
+        "passed": true,
+        "evidence": "Found 29 matches"
+      },
+      {
+        "text": "--outputオプション定義",
+        "passed": true,
+        "evidence": "Found 6 matches"
+      },
+      {
+        "text": "UI/ビジネスロジック分離（ディレクトリ構造）",
+        "passed": true,
+        "evidence": "Found ui/ + lib/commands/ directories"
+      }
+    ],
+    "pass_rate": 1.0,
+    "pass_count": 6,
+    "total": 6
+  },
+  "eval-0-nodejs-csv-converter/without_skill": {
+    "variant": "without_skill",
+    "expectations": [
+      {
+        "text": "figletでバナー表示がある",
+        "passed": true,
+        "evidence": "Found 10 matches"
+      },
+      {
+        "text": "カラーテーマが定義されている",
+        "passed": true,
+        "evidence": "Found 45 matches"
+      },
+      {
+        "text": "commanderでコマンドルーティング",
+        "passed": true,
+        "evidence": "Found 4 matches"
+      },
+      {
+        "text": "プログレス表示がある",
+        "passed": true,
+        "evidence": "Found 36 matches"
+      },
+      {
+        "text": "--outputオプション定義",
+        "passed": true,
+        "evidence": "Found 7 matches"
+      },
+      {
+        "text": "UI/ビジネスロジック分離（ディレクトリ構造）",
+        "passed": true,
+        "evidence": "Found ui/ + lib/commands/ directories"
+      }
+    ],
+    "pass_rate": 1.0,
+    "pass_count": 6,
+    "total": 6
+  },
+  "eval-1-python-project-setup/with_skill": {
+    "variant": "with_skill",
+    "expectations": [
+      {
+        "text": "pyfigletバナー表示",
+        "passed": true,
+        "evidence": "Found 24 matches"
+      },
+      {
+        "text": "richライブラリ使用",
+        "passed": true,
+        "evidence": "Found 75 matches"
+      },
+      {
+        "text": "typerまたはclick使用",
+        "passed": true,
+        "evidence": "Found 26 matches"
+      },
+      {
+        "text": "対話プロンプト",
+        "passed": true,
+        "evidence": "Found 26 matches"
+      },
+      {
+        "text": "プログレスバー/スピナー",
+        "passed": true,
+        "evidence": "Found 38 matches"
+      },
+      {
+        "text": "テンプレート選択肢",
+        "passed": true,
+        "evidence": "Found 48 matches"
+      }
+    ],
+    "pass_rate": 1.0,
+    "pass_count": 6,
+    "total": 6
+  },
+  "eval-1-python-project-setup/without_skill": {
+    "variant": "without_skill",
+    "expectations": [
+      {
+        "text": "pyfigletバナー表示",
+        "passed": true,
+        "evidence": "Found 39 matches"
+      },
+      {
+        "text": "richライブラリ使用",
+        "passed": true,
+        "evidence": "Found 110 matches"
+      },
+      {
+        "text": "typerまたはclick使用",
+        "passed": true,
+        "evidence": "Found 7 matches"
+      },
+      {
+        "text": "対話プロンプト",
+        "passed": true,
+        "evidence": "Found 41 matches"
+      },
+      {
+        "text": "プログレスバー/スピナー",
+        "passed": true,
+        "evidence": "Found 35 matches"
+      },
+      {
+        "text": "テンプレート選択肢",
+        "passed": true,
+        "evidence": "Found 84 matches"
+      }
+    ],
+    "pass_rate": 1.0,
+    "pass_count": 6,
+    "total": 6
+  },
+  "eval-2-task-manager/with_skill": {
+    "variant": "with_skill",
+    "expectations": [
+      {
+        "text": "ASCIIバナー表示",
+        "passed": true,
+        "evidence": "Found 16 matches"
+      },
+      {
+        "text": "addコマンド実装",
+        "passed": true,
+        "evidence": "Found 6 matches"
+      },
+      {
+        "text": "listコマンド実装",
+        "passed": true,
+        "evidence": "Found 6 matches"
+      },
+      {
+        "text": "doneコマンド実装",
+        "passed": true,
+        "evidence": "Found 26 matches"
+      },
+      {
+        "text": "JSONストレージ",
+        "passed": true,
+        "evidence": "Found 9 matches"
+      },
+      {
+        "text": "スタイル付き出力",
+        "passed": true,
+        "evidence": "Found 116 matches"
+      }
+    ],
+    "pass_rate": 1.0,
+    "pass_count": 6,
+    "total": 6
+  },
+  "eval-2-task-manager/without_skill": {
+    "variant": "without_skill",
+    "expectations": [
+      {
+        "text": "ASCIIバナー表示",
+        "passed": true,
+        "evidence": "Found 13 matches"
+      },
+      {
+        "text": "addコマンド実装",
+        "passed": true,
+        "evidence": "Found 2 matches"
+      },
+      {
+        "text": "listコマンド実装",
+        "passed": true,
+        "evidence": "Found 3 matches"
+      },
+      {
+        "text": "doneコマンド実装",
+        "passed": true,
+        "evidence": "Found 25 matches"
+      },
+      {
+        "text": "JSONストレージ",
+        "passed": true,
+        "evidence": "Found 7 matches"
+      },
+      {
+        "text": "スタイル付き出力",
+        "passed": true,
+        "evidence": "Found 28 matches"
+      }
+    ],
+    "pass_rate": 1.0,
+    "pass_count": 6,
+    "total": 6
+  }
+}

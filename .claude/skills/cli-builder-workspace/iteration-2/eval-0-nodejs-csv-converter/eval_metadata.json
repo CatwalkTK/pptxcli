@@ -1,0 +1,16 @@
+{
+  "eval_id": 0,
+  "eval_name": "nodejs-csv-converter",
+  "prompt": "TypeScriptでファイル変換CLIツール「csv2json」を作って。convertコマンドでCSVファイルをJSONに変換できるようにしたい。ASCIIバナー付きで、変換中のプログレス表示もほしい。--output オプションで出力先を指定できるように。",
+  "assertions": [
+    {"name": "uses-typescript", "description": "TypeScript (.ts) ファイルで実装されている", "type": "file_extension", "pattern": ".ts"},
+    {"name": "uses-figlet-library", "description": "figletライブラリでバナー生成している", "type": "content_contains", "pattern": "import.*figlet|require.*figlet"},
+    {"name": "uses-chalk-library", "description": "chalkライブラリでカラー出力している", "type": "content_contains", "pattern": "import.*chalk|require.*chalk"},
+    {"name": "has-commander-setup", "description": "commanderでコマンドルーティング", "type": "content_contains", "pattern": "import.*commander|from 'commander'|Command\\("},
+    {"name": "has-progress-indicator", "description": "ora/cli-progressでプログレス表示", "type": "content_contains", "pattern": "import.*ora|require.*ora|cli-progress|import.*progress"},
+    {"name": "has-output-option", "description": "--output オプション定義", "type": "content_contains", "pattern": "--output|output.*option|'-o'"},
+    {"name": "has-4-layer-architecture", "description": "ui/ + commands/ + lib/ ディレクトリ分離", "type": "structural"},
+    {"name": "has-theme-file", "description": "theme.ts カラーテーマファイルが存在", "type": "file_exists", "pattern": "**/theme.*"},
+    {"name": "has-banner-file", "description": "banner.ts バナーモジュールが存在", "type": "file_exists", "pattern": "**/banner.*"}
+  ]
+}

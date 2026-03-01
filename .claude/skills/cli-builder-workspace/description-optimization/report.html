@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="5">
+    <title>cli-builder — Skill Description Optimization</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lora', Georgia, serif;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            background: #faf9f5;
+            color: #141413;
+        }
+        h1 { font-family: 'Poppins', sans-serif; color: #141413; }
+        .explainer {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border: 1px solid #e8e6dc;
+            color: #b0aea5;
+            font-size: 0.875rem;
+            line-height: 1.6;
+        }
+        .summary {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border: 1px solid #e8e6dc;
+        }
+        .summary p { margin: 5px 0; }
+        .best { color: #788c5d; font-weight: bold; }
+        .table-container {
+            overflow-x: auto;
+            width: 100%;
+        }
+        table {
+            border-collapse: collapse;
+            background: white;
+            border: 1px solid #e8e6dc;
+            border-radius: 6px;
+            font-size: 12px;
+            min-width: 100%;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #e8e6dc;
+            white-space: normal;
+            word-wrap: break-word;
+        }
+        th {
+            font-family: 'Poppins', sans-serif;
+            background: #141413;
+            color: #faf9f5;
+            font-weight: 500;
+        }
+        th.test-col {
+            background: #6a9bcc;
+        }
+        th.query-col { min-width: 200px; }
+        td.description {
+            font-family: monospace;
+            font-size: 11px;
+            word-wrap: break-word;
+            max-width: 400px;
+        }
+        td.result {
+            text-align: center;
+            font-size: 16px;
+            min-width: 40px;
+        }
+        td.test-result {
+            background: #f0f6fc;
+        }
+        .pass { color: #788c5d; }
+        .fail { color: #c44; }
+        .rate {
+            font-size: 9px;
+            color: #b0aea5;
+            display: block;
+        }
+        tr:hover { background: #faf9f5; }
+        .score {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 11px;
+        }
+        .score-good { background: #eef2e8; color: #788c5d; }
+        .score-ok { background: #fef3c7; color: #d97706; }
+        .score-bad { background: #fceaea; color: #c44; }
+        .train-label { color: #b0aea5; font-size: 10px; }
+        .test-label { color: #6a9bcc; font-size: 10px; font-weight: bold; }
+        .best-row { background: #f5f8f2; }
+        th.positive-col { border-bottom: 3px solid #788c5d; }
+        th.negative-col { border-bottom: 3px solid #c44; }
+        th.test-col.positive-col { border-bottom: 3px solid #788c5d; }
+        th.test-col.negative-col { border-bottom: 3px solid #c44; }
+        .legend { font-family: 'Poppins', sans-serif; display: flex; gap: 20px; margin-bottom: 10px; font-size: 13px; align-items: center; }
+        .legend-item { display: flex; align-items: center; gap: 6px; }
+        .legend-swatch { width: 16px; height: 16px; border-radius: 3px; display: inline-block; }
+        .swatch-positive { background: #141413; border-bottom: 3px solid #788c5d; }
+        .swatch-negative { background: #141413; border-bottom: 3px solid #c44; }
+        .swatch-test { background: #6a9bcc; }
+        .swatch-train { background: #141413; }
+    </style>
+</head>
+<body>
+    <h1>cli-builder — Skill Description Optimization</h1>
+    <div class="explainer">
+        <strong>Optimizing your skill's description.</strong> This page updates automatically as Claude tests different versions of your skill's description. Each row is an iteration — a new description attempt. The columns show test queries: green checkmarks mean the skill triggered correctly (or correctly didn't trigger), red crosses mean it got it wrong. The "Train" score shows performance on queries used to improve the description; the "Test" score shows performance on held-out queries the optimizer hasn't seen. When it's done, Claude will apply the best-performing description to your skill.
+    </div>
+
+    <div class="summary">
+        <p><strong>Original:</strong> Build professional interactive CLI applications with polished UX — ASCII art banners, colored output, interactive prompts, command routing, progress indicators, and status lines. Use this skill whenever the user wants to create a CLI tool, command-line application, terminal utility, or console program. Also trigger when the user mentions &#x27;CLI&#x27;, &#x27;command line&#x27;, &#x27;terminal app&#x27;, &#x27;console tool&#x27;, wants to add a banner or styled output to a script, or asks to make a script interactive. Supports both Node.js/TypeScript and Python. Even if the user just says &#x27;make it look nice in the terminal&#x27; or &#x27;add a cool banner&#x27;, this skill applies.</p>
+        <p class="best"><strong>Best:</strong> Build professional interactive CLI applications with polished UX — ASCII art banners, colored output, interactive prompts, command routing, progress indicators, and status lines. Use this skill whenever the user wants to create a CLI tool, command-line application, terminal utility, or console program. Also trigger when the user mentions &#x27;CLI&#x27;, &#x27;command line&#x27;, &#x27;terminal app&#x27;, &#x27;console tool&#x27;, wants to add a banner or styled output to a script, or asks to make a script interactive. Supports both Node.js/TypeScript and Python. Even if the user just says &#x27;make it look nice in the terminal&#x27; or &#x27;add a cool banner&#x27;, this skill applies.</p>
+        <p><strong>Best Score:</strong> in progress (train)</p>
+        <p><strong>Iterations:</strong> 1 | <strong>Train:</strong> 12 | <strong>Test:</strong> 8</p>
+    </div>
+
+    <div class="legend">
+        <span style="font-weight:600">Query columns:</span>
+        <span class="legend-item"><span class="legend-swatch swatch-positive"></span> Should trigger</span>
+        <span class="legend-item"><span class="legend-swatch swatch-negative"></span> Should NOT trigger</span>
+        <span class="legend-item"><span class="legend-swatch swatch-train"></span> Train</span>
+        <span class="legend-item"><span class="legend-swatch swatch-test"></span> Test</span>
+    </div>
+
+    <div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Iter</th>
+                <th>Train</th>
+                <th>Test</th>
+                <th class="query-col">Description</th>
+                <th class="positive-col">Pythonでコマンドラインツール作成を手伝ってほしい。引数でサブコマンドを切り替えて、`init`でプロジェクト雛形を生成、`serve`でローカルサーバー起動、`build`で成果物をビルドする感じ。ヘルプメッセージもきちんと出したい。</th>
+                <th class="positive-col">Make a Node.js script that runs in the terminal with a cool banner, accepts commands like `scan`, `report`, and `fix`, shows a spinner while scanning files for TODO comments, and prints results in a table format with colors.</th>
+                <th class="positive-col">社内用のCLIを作りたいんだけど、`myctl config set`とか`myctl config get`みたいにサブコマンドをネストさせたい。あとバージョン表示とかヘルプも自動生成してほしい。Python or Node.jsどっちでもOK。</th>
+                <th class="positive-col">need a quick interactive terminal app - user selects from a list of AWS regions, then picks an EC2 instance type, and it generates a terraform snippet. color output would be nice</th>
+                <th class="positive-col">Build me a CLI tool in Node.js that takes a CSV file path as input, lets the user pick which columns to keep via an interactive checkbox prompt, and outputs the filtered CSV. Should have a nice ASCII banner at startup.</th>
+                <th class="positive-col">CLIアプリを作りたい。Pythonで、対話的にユーザーにDB接続情報（ホスト、ポート、ユーザー名、パスワード）を入力させて、マイグレーションを実行するツール。プログレスバーも欲しい。</th>
+                <th class="negative-col">Reactでダッシュボード画面を作りたい。グラフとテーブルがあって、フィルター機能もつけたい。Material UIを使って。</th>
+                <th class="negative-col">PythonでSeleniumを使ってブラウザ自動操作するスクリプトを書いて。ログインして、特定のページからデータをスクレイピングしてJSONに保存したい。</th>
+                <th class="negative-col">I need to write a shell one-liner that finds all .log files older than 30 days in /var/log and deletes them. Not a full tool, just the command.</th>
+                <th class="negative-col">Build a REST API in Node.js with Express that has endpoints for user CRUD operations. Should connect to PostgreSQL and include JWT authentication.</th>
+                <th class="negative-col">Dockerfileを書いて。Node.js 20のalpineベースで、pnpm使って依存インストールして、Next.jsアプリをビルド・起動する。マルチステージビルドで。</th>
+                <th class="negative-col">Create a GitHub Actions workflow that runs ESLint, Prettier, and Jest on every PR. Should also check code coverage and post results as a comment.</th>
+                <th class="test-col positive-col">ターミナルで動くタスク管理ツールを作って。add, list, done, deleteのコマンドがあって、リスト表示時は色付きでステータスが分かるようにしたい。Node.jsで。</th>
+                <th class="test-col positive-col">I&#x27;m building a developer tool that lives in the terminal. It should greet the user with an ASCII art logo, show a status line with the current project info, and provide an interactive menu to run linting, testing, or formatting. Think of it like a mini dashboard for the console.</th>
+                <th class="test-col positive-col">I want to create a command-line interface for our internal deployment system at Acme Corp. It needs subcommands like `deploy`, `rollback`, `status`, and `logs`. Each subcommand should have its own flags. TypeScript preferred.</th>
+                <th class="test-col positive-col">create a terminal-based file organizer - walks through ~/Downloads, asks the user interactively how to categorize each file type, moves them into folders, and shows progress with a bar. typescript please</th>
+                <th class="test-col negative-col">Help me debug this TypeScript error: &#x27;Type string is not assignable to type number&#x27; on line 42 of src/services/UserService.ts. Here&#x27;s the code...</th>
+                <th class="test-col negative-col">I need a Python script to parse a CSV file at C:\data\sales_2025.csv, calculate the sum of the &#x27;revenue&#x27; column grouped by &#x27;region&#x27;, and save the result to output.csv. No user interaction needed, just a one-shot script.</th>
+                <th class="test-col negative-col">Node.jsでWebSocketサーバーを立てて、リアルタイムチャットアプリのバックエンドを作って。フロントはNext.jsで。</th>
+                <th class="test-col negative-col">Write a bash script that backs up /var/log to S3 every night at 2am. Include log rotation and email notification on failure.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="best-row">
+                <td>1</td>
+                <td><span class="score score-ok">18/36</span></td>
+                <td><span class="score score-ok">12/24</span></td>
+                <td class="description">Build professional interactive CLI applications with polished UX — ASCII art banners, colored output, interactive prompts, command routing, progress indicators, and status lines. Use this skill whenever the user wants to create a CLI tool, command-line application, terminal utility, or console program. Also trigger when the user mentions &#x27;CLI&#x27;, &#x27;command line&#x27;, &#x27;terminal app&#x27;, &#x27;console tool&#x27;, wants to add a banner or styled output to a script, or asks to make a script interactive. Supports both Node.js/TypeScript and Python. Even if the user just says &#x27;make it look nice in the terminal&#x27; or &#x27;add a cool banner&#x27;, this skill applies.</td>
+                <td class="result fail">✗<span class="rate">0/3</span></td>
+                <td class="result fail">✗<span class="rate">0/3</span></td>
+                <td class="result fail">✗<span class="rate">0/3</span></td>
+                <td class="result fail">✗<span class="rate">0/3</span></td>
+                <td class="result fail">✗<span class="rate">0/3</span></td>
+                <td class="result fail">✗<span class="rate">0/3</span></td>
+                <td class="result pass">✓<span class="rate">0/3</span></td>
+                <td class="result pass">✓<span class="rate">0/3</span></td>
+                <td class="result pass">✓<span class="rate">0/3</span></td>
+                <td class="result pass">✓<span class="rate">0/3</span></td>
+                <td class="result pass">✓<span class="rate">0/3</span></td>
+                <td class="result pass">✓<span class="rate">0/3</span></td>
+                <td class="result test-result fail">✗<span class="rate">0/3</span></td>
+                <td class="result test-result fail">✗<span class="rate">0/3</span></td>
+                <td class="result test-result fail">✗<span class="rate">0/3</span></td>
+                <td class="result test-result fail">✗<span class="rate">0/3</span></td>
+                <td class="result test-result pass">✓<span class="rate">0/3</span></td>
+                <td class="result test-result pass">✓<span class="rate">0/3</span></td>
+                <td class="result test-result pass">✓<span class="rate">0/3</span></td>
+                <td class="result test-result pass">✓<span class="rate">0/3</span></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+</body>
+</html>

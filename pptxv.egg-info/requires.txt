@@ -1,0 +1,6 @@
+python-pptx>=0.6.21
+anthropic>=0.84.0
+rich>=14.0.0
+pyfiglet>=0.8.0
+prompt_toolkit>=3.0.50
+python-dotenv>=1.0.0

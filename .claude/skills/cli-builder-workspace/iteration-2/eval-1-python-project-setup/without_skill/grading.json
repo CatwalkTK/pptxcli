@@ -1,0 +1,53 @@
+{
+  "variant": "without_skill",
+  "expectations": [
+    {
+      "text": "typer（推奨）使用",
+      "passed": false,
+      "evidence": "No matches in source code"
+    },
+    {
+      "text": "pyfigletバナー生成",
+      "passed": false,
+      "evidence": "No matches in source code"
+    },
+    {
+      "text": "richライブラリ使用",
+      "passed": true,
+      "evidence": "Found 9 matches"
+    },
+    {
+      "text": "questionary対話プロンプト",
+      "passed": true,
+      "evidence": "Found 2 matches"
+    },
+    {
+      "text": "プログレスバー/スピナー",
+      "passed": true,
+      "evidence": "Found 11 matches"
+    },
+    {
+      "text": "テンプレート選択肢",
+      "passed": true,
+      "evidence": "Found 19 matches"
+    },
+    {
+      "text": "ui/ + commands/ + lib/ 分離",
+      "passed": false,
+      "evidence": "No layer directories found"
+    },
+    {
+      "text": "pyproject.toml設定",
+      "passed": true,
+      "evidence": "Found: pyproject.toml"
+    },
+    {
+      "text": "theme.py テーマファイル",
+      "passed": false,
+      "evidence": "No matching files"
+    }
+  ],
+  "pass_rate": 0.556,
+  "pass_count": 5,
+  "total": 9
+}

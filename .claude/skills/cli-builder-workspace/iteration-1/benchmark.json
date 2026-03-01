@@ -1,0 +1,75 @@
+{
+  "skill_name": "cli-builder",
+  "iteration": 1,
+  "configurations": [
+    {
+      "name": "with_skill",
+      "evals": [
+        {
+          "eval_name": "nodejs-csv-converter",
+          "pass_rate": 1.0,
+          "tokens": 81103,
+          "duration_seconds": 157.1
+        },
+        {
+          "eval_name": "python-project-setup",
+          "pass_rate": 1.0,
+          "tokens": 84921,
+          "duration_seconds": 226.2
+        },
+        {
+          "eval_name": "task-manager",
+          "pass_rate": 1.0,
+          "tokens": 70979,
+          "duration_seconds": 148.9
+        }
+      ],
+      "aggregate": {
+        "mean_pass_rate": 1.0,
+        "mean_tokens": 79001,
+        "mean_duration_seconds": 177.4
+      }
+    },
+    {
+      "name": "without_skill",
+      "evals": [
+        {
+          "eval_name": "nodejs-csv-converter",
+          "pass_rate": 1.0,
+          "tokens": 60132,
+          "duration_seconds": 118.7
+        },
+        {
+          "eval_name": "python-project-setup",
+          "pass_rate": 1.0,
+          "tokens": 67567,
+          "duration_seconds": 216.0
+        },
+        {
+          "eval_name": "task-manager",
+          "pass_rate": 1.0,
+          "tokens": 63159,
+          "duration_seconds": 160.6
+        }
+      ],
+      "aggregate": {
+        "mean_pass_rate": 1.0,
+        "mean_tokens": 63619,
+        "mean_duration_seconds": 165.1
+      }
+    }
+  ],
+  "delta": {
+    "pass_rate": 0.0,
+    "tokens": "+24%",
+    "duration": "+7%"
+  },
+  "analyst_notes": [
+    "All assertions pass for both configurations - assertions are non-discriminating for this skill type",
+    "with_skill uses ~24% more tokens on average (79K vs 64K) due to reading skill + reference files",
+    "Duration is comparable (~7% slower with skill, within noise)",
+    "Key qualitative differences observed: with_skill consistently uses recommended libraries (typer over click, figlet, ora), follows 4-layer architecture, includes PPTX VIBE status line pattern, adds NO_COLOR support and non-interactive --yes flags",
+    "without_skill produces good code but with more variation: one used zero-dependency custom ANSI colors, one chose click over typer, none added PPTX VIBE status line pattern",
+    "Eval 2 (task-manager) shows clearest architectural difference: with_skill chose TypeScript with immutable patterns per project rules; without_skill chose vanilla JS with no TypeScript"
+  ]
+}

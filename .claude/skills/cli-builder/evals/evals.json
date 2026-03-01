@@ -1,0 +1,137 @@
+{
+  "skill_name": "cli-builder",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "TypeScriptでファイル変換CLIツール「csv2json」を作って。convertコマンドでCSVファイルをJSONに変換できるようにしたい。ASCIIバナー付きで、変換中のプログレス表示もほしい。--output オプションで出力先を指定できるように。",
+      "expected_output": "Node.js/TypeScript CLI project with commander, chalk, figlet, ora. Has banner, convert command with progress spinner, --output flag.",
+      "files": [],
+      "assertions": [
+        {
+          "name": "has-banner-module",
+          "description": "バナー表示用のモジュールが存在する",
+          "type": "file_exists_pattern",
+          "pattern": "**/banner*"
+        },
+        {
+          "name": "has-color-theme",
+          "description": "カラーテーマが定義されている",
+          "type": "content_contains",
+          "pattern": "chalk|theme|color"
+        },
+        {
+          "name": "has-commander-setup",
+          "description": "commanderまたはyargsでコマンドルーティングが設定されている",
+          "type": "content_contains",
+          "pattern": "commander|Command|yargs"
+        },
+        {
+          "name": "has-progress-indicator",
+          "description": "プログレス表示(spinnerまたはprogress bar)がある",
+          "type": "content_contains",
+          "pattern": "ora|spinner|progress"
+        },
+        {
+          "name": "has-output-option",
+          "description": "--output オプションが定義されている",
+          "type": "content_contains",
+          "pattern": "--output|output.*option"
+        },
+        {
+          "name": "separation-of-concerns",
+          "description": "UIとビジネスロジックが分離されている (別ファイル)",
+          "type": "structural",
+          "description_detail": "commands/ と lib/ または ui/ のディレクトリ分離"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Pythonでプロジェクトセットアップ用のCLIツール「projinit」を作って。対話的にテンプレート選択（minimal, standard, full）ができて、プロジェクト名の入力、依存パッケージのインストールでプログレスバーが表示される。起動時にかっこいいバナーを出して。",
+      "expected_output": "Python CLI with typer, rich, pyfiglet, questionary. Has interactive prompts, progress bar, banner display.",
+      "files": [],
+      "assertions": [
+        {
+          "name": "has-banner-module",
+          "description": "pyfigletでバナー表示がある",
+          "type": "content_contains",
+          "pattern": "pyfiglet|figlet_format"
+        },
+        {
+          "name": "has-rich-output",
+          "description": "rich libraryでスタイル付き出力がある",
+          "type": "content_contains",
+          "pattern": "rich|Console|rich.console"
+        },
+        {
+          "name": "has-typer-or-click",
+          "description": "typerまたはclickでコマンド定義されている",
+          "type": "content_contains",
+          "pattern": "typer|click"
+        },
+        {
+          "name": "has-interactive-prompts",
+          "description": "対話的プロンプトがある",
+          "type": "content_contains",
+          "pattern": "questionary|Prompt|prompt|select|input"
+        },
+        {
+          "name": "has-progress-bar",
+          "description": "プログレスバーまたはスピナーがある",
+          "type": "content_contains",
+          "pattern": "progress|track|status|spinner"
+        },
+        {
+          "name": "has-template-choices",
+          "description": "3つのテンプレート選択肢がある",
+          "type": "content_contains",
+          "pattern": "minimal.*standard.*full|template"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "ターミナルで動くかっこいいタスク管理ツールを作りたい。add, list, done コマンドでタスクを管理できるようにして。起動時のバナーとステータス表示もほしい。JSONファイルでタスクを保存して。",
+      "expected_output": "CLI task manager with banner, status line, add/list/done subcommands, JSON file storage. Stack should be chosen appropriately.",
+      "files": [],
+      "assertions": [
+        {
+          "name": "has-banner",
+          "description": "ASCII artバナーが表示される",
+          "type": "content_contains",
+          "pattern": "figlet|banner|pyfiglet"
+        },
+        {
+          "name": "has-add-command",
+          "description": "addコマンドが実装されている",
+          "type": "content_contains",
+          "pattern": "add|command.*add"
+        },
+        {
+          "name": "has-list-command",
+          "description": "listコマンドが実装されている",
+          "type": "content_contains",
+          "pattern": "list|command.*list"
+        },
+        {
+          "name": "has-done-command",
+          "description": "doneコマンドが実装されている",
+          "type": "content_contains",
+          "pattern": "done|complete|command.*done"
+        },
+        {
+          "name": "has-json-storage",
+          "description": "JSONファイルでタスクを永続化する",
+          "type": "content_contains",
+          "pattern": "json|JSON|readFile|writeFile|json.dump|json.load"
+        },
+        {
+          "name": "has-styled-output",
+          "description": "色付きまたはスタイル付き出力がある",
+          "type": "content_contains",
+          "pattern": "chalk|rich|color|style|theme"
+        }
+      ]
+    }
+  ]
+}

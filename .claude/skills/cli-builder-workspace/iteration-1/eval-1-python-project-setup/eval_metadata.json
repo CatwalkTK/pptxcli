@@ -1,0 +1,37 @@
+{
+  "eval_id": 1,
+  "eval_name": "python-project-setup",
+  "prompt": "Pythonでプロジェクトセットアップ用のCLIツール「projinit」を作って。対話的にテンプレート選択（minimal, standard, full）ができて、プロジェクト名の入力、依存パッケージのインストールでプログレスバーが表示される。起動時にかっこいいバナーを出して。",
+  "assertions": [
+    {
+      "name": "has-banner-module",
+      "description": "pyfigletでバナー表示がある",
+      "check": "content_contains_pyfiglet"
+    },
+    {
+      "name": "has-rich-output",
+      "description": "rich libraryでスタイル付き出力がある",
+      "check": "content_contains_rich"
+    },
+    {
+      "name": "has-typer-or-click",
+      "description": "typerまたはclickでコマンド定義されている",
+      "check": "content_contains_typer_or_click"
+    },
+    {
+      "name": "has-interactive-prompts",
+      "description": "対話的プロンプトがある（questionary等）",
+      "check": "content_contains_interactive_prompts"
+    },
+    {
+      "name": "has-progress-bar",
+      "description": "プログレスバーまたはスピナーがある",
+      "check": "content_contains_progress"
+    },
+    {
+      "name": "has-template-choices",
+      "description": "3つのテンプレート選択肢(minimal/standard/full)がある",
+      "check": "content_contains_template_choices"
+    }
+  ]
+}

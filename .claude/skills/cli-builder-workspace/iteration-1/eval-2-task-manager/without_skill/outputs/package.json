@@ -1,0 +1,22 @@
+{
+  "name": "taskforge-cli",
+  "version": "1.0.0",
+  "description": "A stylish terminal-based task manager with banner art and color-coded status display",
+  "main": "src/index.js",
+  "bin": {
+    "taskforge": "./src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "add": "node src/index.js add",
+    "list": "node src/index.js list",
+    "done": "node src/index.js done"
+  },
+  "keywords": [
+    "cli",
+    "task-manager",
+    "terminal",
+    "productivity"
+  ],
+  "license": "MIT"
+}

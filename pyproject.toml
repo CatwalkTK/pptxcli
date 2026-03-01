@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pptxv"
+version = "0.1.0"
+description = "PPTX VIBE - Multi-Provider AI Agent CLI"
+requires-python = ">=3.8"
+dependencies = [
+    "python-pptx>=0.6.21",
+    "anthropic>=0.84.0",
+    "rich>=14.0.0",
+    "pyfiglet>=0.8.0",
+    "prompt_toolkit>=3.0.50",
+    "python-dotenv>=1.0.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["cli*"]
+
+[project.scripts]
+pptxv = "cli.__main__:main"

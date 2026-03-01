@@ -1,0 +1,53 @@
+{
+  "variant": "with_skill",
+  "expectations": [
+    {
+      "text": "TypeScript (.ts) ファイルで実装",
+      "passed": true,
+      "evidence": "Found 12 \\.ts$ files"
+    },
+    {
+      "text": "figletライブラリ使用",
+      "passed": true,
+      "evidence": "Found 1 matches"
+    },
+    {
+      "text": "chalkライブラリ使用",
+      "passed": true,
+      "evidence": "Found 2 matches"
+    },
+    {
+      "text": "commanderルーティング",
+      "passed": true,
+      "evidence": "Found 3 matches"
+    },
+    {
+      "text": "プログレス表示",
+      "passed": true,
+      "evidence": "Found 4 matches"
+    },
+    {
+      "text": "--outputオプション",
+      "passed": true,
+      "evidence": "Found 6 matches"
+    },
+    {
+      "text": "ui/ + commands/ + lib/ ディレクトリ分離",
+      "passed": true,
+      "evidence": "Found: ui/, commands/, lib/"
+    },
+    {
+      "text": "theme.ts テーマファイル",
+      "passed": true,
+      "evidence": "Found: src/ui/theme.ts"
+    },
+    {
+      "text": "banner.ts バナーモジュール",
+      "passed": true,
+      "evidence": "Found: src/ui/banner.ts"
+    }
+  ],
+  "pass_rate": 1.0,
+  "pass_count": 9,
+  "total": 9
+}

@@ -1,0 +1,16 @@
+{
+  "eval_id": 2,
+  "eval_name": "task-manager",
+  "prompt": "ターミナルで動くかっこいいタスク管理ツールを作りたい。add, list, done コマンドでタスクを管理できるようにして。起動時のバナーとステータス表示もほしい。JSONファイルでタスクを保存して。",
+  "assertions": [
+    {"name": "uses-figlet-or-pyfiglet", "description": "figlet/pyfigletライブラリでバナー生成", "type": "content_contains", "pattern": "import.*figlet|require.*figlet|from pyfiglet|pyfiglet"},
+    {"name": "uses-established-color-lib", "description": "chalk/richなど確立されたカラーライブラリ使用", "type": "content_contains", "pattern": "import.*chalk|require.*chalk|from rich|import rich"},
+    {"name": "has-add-command", "description": "addコマンド実装", "type": "content_contains", "pattern": "['\"]add['\"]|command.*add|\\.command\\(['\"]add"},
+    {"name": "has-list-command", "description": "listコマンド実装", "type": "content_contains", "pattern": "['\"]list['\"]|command.*list|\\.command\\(['\"]list"},
+    {"name": "has-done-command", "description": "doneコマンド実装", "type": "content_contains", "pattern": "['\"]done['\"]|command.*done|\\.command\\(['\"]done|complete"},
+    {"name": "has-json-storage", "description": "JSONファイルでタスク永続化", "type": "content_contains", "pattern": "\\.json|JSON\\.parse|JSON\\.stringify|json\\.load|json\\.dump"},
+    {"name": "has-4-layer-architecture", "description": "ui/ + commands/ + lib/ ディレクトリ分離", "type": "structural"},
+    {"name": "has-theme-file", "description": "theme.ts/theme.py テーマファイルが存在", "type": "file_exists", "pattern": "**/theme.*"},
+    {"name": "uses-typescript-or-typed", "description": "TypeScript(.ts)またはtyper(型付き)で実装", "type": "file_or_content", "pattern": "\\.ts$|import typer"}
+  ]
+}

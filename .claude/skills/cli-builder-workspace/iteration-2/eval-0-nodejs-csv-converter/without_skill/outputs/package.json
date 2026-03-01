@@ -1,0 +1,35 @@
+{
+  "name": "csv2json",
+  "version": "1.0.0",
+  "description": "A CLI tool to convert CSV files to JSON format",
+  "main": "dist/index.js",
+  "bin": {
+    "csv2json": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "lint": "eslint src/**/*.ts",
+    "test": "jest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "csv",
+    "json",
+    "converter",
+    "cli"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0",
+    "csv-parse": "^5.5.3",
+    "ora": "^5.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.3"
+  }
+}
