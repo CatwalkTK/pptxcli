@@ -52,6 +52,10 @@ ANTHROPIC_API_KEY=あなたのAPIキー
 ### CLI の起動
 
 ```bash
+# パッケージインストール後
+pptxv
+
+# または開発時
 python -m cli
 ```
 

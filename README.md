@@ -52,6 +52,10 @@ ANTHROPIC_API_KEY=your-api-key-here
 ### Run the CLI
 
 ```bash
+# After package installation
+pptxv
+
+# Or during development
 python -m cli
 ```
 
