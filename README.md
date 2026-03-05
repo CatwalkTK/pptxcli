@@ -78,6 +78,69 @@ pptx/
 | `/clear` | Clear conversation history |
 | `/exit` | Exit the application |
 
+## Design Prompts — How to Get Great Slides
+
+Just describe what you want in natural language. Here are prompt examples from simple to advanced:
+
+### Basic
+
+```
+Claude最新情報のプレゼンを作って
+```
+
+```
+Create a 10-slide pitch deck for a SaaS startup
+```
+
+### With Design Direction
+
+```
+ダークテーマでAI戦略の資料を作って。アクセントカラーはティール。
+```
+
+```
+Make a product launch deck with a coral & navy color scheme, large stat callouts, and icon grids.
+```
+
+### With Theme
+
+```
+セールス報告書を作って。theme-factoryでMinimal Darkテーマを適用して。
+```
+
+```
+Create a quarterly report and apply the "Ocean Gradient" theme.
+```
+
+### Editing Existing Files
+
+```
+output/my_deck.pptx のスライド3のグラフを更新して
+```
+
+```
+Add speaker notes to all slides in output/presentation.pptx
+```
+
+### Advanced — Full Control
+
+```
+16:9 ワイドで、2カラムレイアウト中心の資料を作成。
+背景はダークネイビー(#0F172A)、アクセントはアンバー(#D4A574)。
+フォントはCalibri、タイトル36pt、本文14pt。
+スライド末尾にページ番号とフッターラインを入れて。
+```
+
+### Tips
+
+| Tip | Example |
+|-----|---------|
+| Specify slide count | `10枚で` / `in 8 slides` |
+| Request layout types | `2カラム` / `grid layout` / `stat callouts` |
+| Set color palette | `ティール＆ゴールド` / `dark theme with coral accent` |
+| Add charts | `売上推移の棒グラフを含めて` / `include a bar chart` |
+| Apply theme | `theme-factoryでテーマ適用` / `apply Midnight Executive theme` |
+
 ## Skills
 
 This project uses Claude Agent Skills for specialized tasks:
