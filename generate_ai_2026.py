@@ -3,6 +3,8 @@
 2026年のAI事情 - スライド生成スクリプト
 animations.md に基づき Fade トランジションを適用
 """
+import os
+
 from pptx import Presentation
 from pptx.util import Inches, Pt
 from pptx.enum.text import PP_ALIGN
@@ -213,7 +215,9 @@ for text in [
     p.font.size = Pt(18)
     p.space_after = Pt(10)
 
-# 一時ファイルとして保存
-static_path = "ai_2026_static.pptx"
+# 一時ファイルとして保存（output/ディレクトリへ）
+output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "output")
+os.makedirs(output_dir, exist_ok=True)
+static_path = os.path.join(output_dir, "ai_2026_static.pptx")
 prs.save(static_path)
 print(f"静的PPTXを生成: {static_path}")

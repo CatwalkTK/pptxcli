@@ -155,7 +155,11 @@ async def _generate_pptx(
 
     if not filename.endswith(".pptx"):
         filename = f"{filename}.pptx"
-    abs_path = os.path.abspath(filename)
+    # Ensure output goes to the output/ directory
+    project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    output_dir = os.path.join(project_root, "output")
+    os.makedirs(output_dir, exist_ok=True)
+    abs_path = os.path.join(output_dir, os.path.basename(filename))
     prs.save(abs_path)
     slide_count = len(prs.slides)
     return f"PowerPoint generated: {abs_path} ({slide_count} slides)"

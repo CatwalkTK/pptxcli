@@ -3,6 +3,8 @@
 最近のAI事情 - スライド生成スクリプト
 pptx-generatorスキルに基づき python-pptx で作成
 """
+import os
+
 from pptx import Presentation
 from pptx.util import Inches, Pt
 from pptx.enum.text import PP_ALIGN
@@ -232,7 +234,9 @@ p5 = tf.add_paragraph()
 p5.text = "• 用途に応じたモデル選びが重要"
 p5.font.size = Pt(18)
 
-# 保存
-output_path = "最近のAI事情_2025.pptx"
+# 保存（output/ディレクトリへ）
+output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "output")
+os.makedirs(output_dir, exist_ok=True)
+output_path = os.path.join(output_dir, "最近のAI事情_2025.pptx")
 prs.save(output_path)
 print(f"スライドを生成しました: {output_path}")

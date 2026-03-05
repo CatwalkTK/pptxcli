@@ -1,5 +1,7 @@
 """PPTX AI Assistant CLI 仕様紹介プレゼンテーション生成スクリプト"""
 
+import os
+
 from pptx import Presentation
 from pptx.util import Inches, Pt
 from pptx.dml.color import RGBColor
@@ -501,7 +503,9 @@ add_text(s, Inches(0.8), Inches(6.5), Inches(11.7), Inches(0.5),
 add_slide_number(s, 10, TOTAL_SLIDES)
 
 # ========== Save ==========
-output = 'pptx_ai_assistant_cli_spec.pptx'
+output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "output")
+os.makedirs(output_dir, exist_ok=True)
+output = os.path.join(output_dir, 'pptx_ai_assistant_cli_spec.pptx')
 prs.save(output)
 print(f'Saved: {output}')
 print(f'Slides: {len(prs.slides)}')

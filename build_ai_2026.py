@@ -8,8 +8,10 @@ import subprocess
 import sys
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_PPTX = os.path.join(SCRIPT_DIR, "ai_2026_static.pptx")
-OUTPUT_PPTX = os.path.join(SCRIPT_DIR, "2026年のAI事情.pptx")
+OUTPUT_DIR = os.path.join(SCRIPT_DIR, "output")
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+STATIC_PPTX = os.path.join(OUTPUT_DIR, "ai_2026_static.pptx")
+OUTPUT_PPTX = os.path.join(OUTPUT_DIR, "2026年のAI事情.pptx")
 
 
 def main():
