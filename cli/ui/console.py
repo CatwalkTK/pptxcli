@@ -1,10 +1,13 @@
 """Rich console rendering helpers."""
 
 import os
+from contextlib import contextmanager
 
 from rich.console import Console
 from rich.markdown import Markdown
 from rich.panel import Panel
+from rich.spinner import Spinner
+from rich.style import Style
 
 console = Console()
 
@@ -13,58 +16,49 @@ def print_welcome() -> None:
     """PPTX-VIBE style startup screen."""
     from cli import __version__
 
-    import pyfiglet
-
     cwd = os.getcwd()
     model = os.environ.get("CLI_MODEL", "claude-sonnet-4-20250514")
 
-    # Block font: VISUAL STUDIO style - two words, clear vertical separation
-    try:
-        pptx_art = pyfiglet.figlet_format("PPTX", font="block")
-        vibe_art = pyfiglet.figlet_format("VIBE", font="block")
-    except Exception:
-        pptx_art = pyfiglet.figlet_format("PPTX", font="standard")
-        vibe_art = pyfiglet.figlet_format("VIBE", font="standard")
-    # Strip to content, normalize line lengths
-    pptx_lines = [l.rstrip() for l in pptx_art.rstrip().split("\n") if l.strip()]
-    vibe_lines = [l.rstrip() for l in vibe_art.rstrip().split("\n") if l.strip()]
-    pptx_w = max(len(l) for l in pptx_lines) if pptx_lines else 0
-    vibe_w = max(len(l) for l in vibe_lines) if vibe_lines else 0
-    # Pad to consistent width, center VIBE under PPTX
-    pptx_padded = [l.ljust(pptx_w) for l in pptx_lines]
-    indent = max(0, (pptx_w - vibe_w) // 2)
-    vibe_padded = [" " * indent + l.ljust(vibe_w) for l in vibe_lines]
-    # Significant vertical space between words (VISUAL STUDIO style)
-    ascii_lines = pptx_padded + [""] + [""] + vibe_padded
-    title = "\n".join(
-        f"[bold magenta]{line}[/bold magenta]" for line in ascii_lines
-    )
-    subtitle = "[white] * MULTI-PROVIDER AI AGENT *[/white]"
-    version_line = f"[dim]v{__version__} // Anthropic * Model: {model}[/dim]"
+    # Sleek modern ASCII art
+    ascii_art = [
+        "╔══════════════════════════════════════════╗",
+        "║                                          ║",
+        "║   ▄▀▀▀▄ ▄▀▀▀▄ ▀▀█▀▀ ▀▄  ▄▀               ║",
+        "║   █▀▀▀▀ █▀▀▀▀   █     ▀▄▀                ║",
+        "║   █     █       █     ▄▀▄                ║",
+        "║   ▀     ▀       ▀    ▀   ▀               ║",
+        "║                                          ║",
+        "║   ▐█ █▌ ▀ ▄▀▀▄  ▄▀▀▀                     ║",
+        "║    █▄█  █ █▀▀▄  █▀▀                      ║",
+        "║     █   █ █▄▄▀  ▀▄▄▄                     ║",
+        "║                                          ║",
+        "║   ─── Presentation AI Studio ───         ║",
+        "║                                          ║",
+        "╚══════════════════════════════════════════╝",
+    ]
 
-    # Info blocks (ASCII-safe for Windows cp932)
+    title = "\n".join(
+        f"[bold cyan]{line}[/bold cyan]" for line in ascii_art
+    )
+    version_line = f"[dim]v{__version__} // Model: {model}[/dim]"
+
+    # Info blocks
     info_lines = [
-        "[red]*[/red] [bold]strong[/bold]  claude-opus-4",
-        "[blue]*[/blue] [bold]balanced[/bold]  claude-sonnet-4",
-        "[green]*[/green] [bold]fast[/bold]  claude-haiku-4",
+        "[red]●[/red] [bold]strong[/bold]  claude-opus-4",
+        "[blue]●[/blue] [bold]balanced[/bold]  claude-sonnet-4",
+        "[green]●[/green] [bold]fast[/bold]  claude-haiku-4",
         "",
-        "[yellow][M][/yellow] [green]Mode +[/green] [white]INTERACTIVE[/white]",
-        "[yellow][S][/yellow] [white]Strategy[/white] [dim]auto[/dim]",
-        "",
-        f"[cyan][>][/cyan] [white]CwD[/white] [dim]{cwd}[/dim]",
+        f"[cyan]▸[/cyan] [white]CwD[/white] [dim]{cwd}[/dim]",
     ]
 
     # Help footer
     help_lines = [
-        "[dim]/help \u30b3\u30de\u30f3\u30c9\u4e00\u89a7[/dim]",
-        "[dim]ESC/Ctrl+C \u4e2d\u65ad (2\u56de\u3067\u7d42\u4e86)[/dim]",
-        '[dim]*""\u3067\u8907\u6570\u884c[/dim]',
-        "[dim]IME\u5bfe\u5fdc: \u7a7a\u884c Enter\u3067\u9001\u4fe1[/dim]",
+        "[dim]/help コマンド一覧[/dim]",
+        "[dim]ESC/Ctrl+C 中断[/dim]",
     ]
 
     content = (
         f"\n{title}\n"
-        f"{subtitle}\n"
         f"{version_line}\n\n"
         + "\n".join(info_lines)
         + "\n\n"
@@ -74,7 +68,7 @@ def print_welcome() -> None:
     console.print(
         Panel(
             content,
-            border_style="magenta",
+            border_style="cyan",
             padding=(1, 2),
         )
     )
@@ -113,6 +107,18 @@ def print_tool_result(tool_name: str, result: str) -> None:
 
 def print_error(message: str) -> None:
     console.print(f"[bold red]Error:[/bold red] {message}")
+
+
+@contextmanager
+def ai_spinner(message: str = "Thinking"):
+    """Show a spinning / animation while AI is processing."""
+    spinner = Spinner(
+        "line",
+        text=f"[bold cyan]{message}[/bold cyan]",
+        style=Style(color="cyan"),
+    )
+    with console.status(spinner, spinner_style="cyan"):
+        yield
 
 
 def _truncate(s: str, max_len: int) -> str:

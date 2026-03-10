@@ -6,7 +6,7 @@ from anthropic import AsyncAnthropic
 
 from .config import ANTHROPIC_API_KEY, MAX_TOKENS, MODEL, SYSTEM_PROMPT
 from .tools import TOOL_MAP, get_anthropic_tools
-from .ui.console import print_error, print_tool_call, print_tool_result
+from .ui.console import ai_spinner, print_error, print_tool_call, print_tool_result
 
 
 class Agent:
@@ -25,13 +25,14 @@ class Agent:
         max_iterations = 20
 
         for _ in range(max_iterations):
-            response = await self._client.messages.create(
-                model=MODEL,
-                max_tokens=MAX_TOKENS,
-                system=SYSTEM_PROMPT,
-                messages=self._messages,
-                tools=self._tools,
-            )
+            with ai_spinner("Thinking"):
+                response = await self._client.messages.create(
+                    model=MODEL,
+                    max_tokens=MAX_TOKENS,
+                    system=SYSTEM_PROMPT,
+                    messages=self._messages,
+                    tools=self._tools,
+                )
 
             collected_blocks = response.content
 

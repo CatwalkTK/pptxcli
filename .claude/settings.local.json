@@ -32,7 +32,9 @@
       "Bash(PYTHONUTF8=1 python:*)",
       "Bash(start:*)",
       "Bash(npx playwright:*)",
-      "Bash(where claude:*)"
+      "Bash(where claude:*)",
+      "Bash(grep:*)",
+      "Bash(rm:*)"
     ]
   }
 }

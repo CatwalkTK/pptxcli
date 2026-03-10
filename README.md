@@ -145,6 +145,10 @@ Add speaker notes to all slides in output/presentation.pptx
 | Add charts | `売上推移の棒グラフを含めて` / `include a bar chart` |
 | Apply theme | `theme-factoryでテーマ適用` / `apply Midnight Executive theme` |
 
+## CLI UX Features
+
+- **AI Spinner** — AI processing indicator with rotating animation (`- \ | /`) displayed while Claude is generating a response
+
 ## Skills
 
 This project uses Claude Agent Skills for specialized tasks:
