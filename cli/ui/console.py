@@ -19,18 +19,21 @@ def print_welcome() -> None:
     cwd = os.getcwd()
     model = os.environ.get("CLI_MODEL", "claude-sonnet-4-20250514")
 
-    # Block-style ASCII art
+    # Block-style ASCII art (pyfiglet ansi_regular)
     ascii_art = [
-        " ██▀▀█  ██▀▀█  ▀▀██▀▀  █▄  ▄█",
-        " ██▄▄▀  ██▄▄▀    ██      ▀██▀ ",
-        " ██     ██       ██      ▄██▄ ",
-        " ▀▀     ▀▀       ▀▀    █▀  ▀█",
+        "██████  ██████  ████████ ██   ██",
+        "██   ██ ██   ██    ██     ██ ██",
+        "██████  ██████     ██      ███",
+        "██      ██         ██     ██ ██",
+        "██      ██         ██    ██   ██",
         "",
-        " █▌  ▐█  ██  ██▀▀▄  ██▀▀▀",
-        "  █▌▐█   ██  ██▀▀█  ██▀▀ ",
-        "   ▀▀    ██  ██▄▄▀  ██▄▄▄",
+        "██    ██ ██ ██████  ███████",
+        "██    ██ ██ ██   ██ ██",
+        "██    ██ ██ ██████  █████",
+        " ██  ██  ██ ██   ██ ██",
+        "  ████   ██ ██████  ███████",
         "",
-        " ═══ Presentation AI Studio ═══",
+        "═══ Presentation AI Studio ═══",
     ]
 
     title = "\n".join(

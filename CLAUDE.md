@@ -77,16 +77,19 @@ titleSlide.addText("サブタイトル — 概要テキスト", {
 When greeting the user at the start of a conversation, display this banner:
 
 ```
- ██▀▀█  ██▀▀█  ▀▀██▀▀  █▄  ▄█
- ██▄▄▀  ██▄▄▀    ██      ▀██▀
- ██     ██       ██      ▄██▄
- ▀▀     ▀▀       ▀▀    █▀  ▀█
+██████  ██████  ████████ ██   ██
+██   ██ ██   ██    ██     ██ ██
+██████  ██████     ██      ███
+██      ██         ██     ██ ██
+██      ██         ██    ██   ██
 
- █▌  ▐█  ██  ██▀▀▄  ██▀▀▀
-  █▌▐█   ██  ██▀▀█  ██▀▀
-   ▀▀    ██  ██▄▄▀  ██▄▄▄
+██    ██ ██ ██████  ███████
+██    ██ ██ ██   ██ ██
+██    ██ ██ ██████  █████
+ ██  ██  ██ ██   ██ ██
+  ████   ██ ██████  ███████
 
- ═══ Presentation AI Studio ═══
+═══ Presentation AI Studio ═══
 ```
 
 After the banner, show a brief status line:
